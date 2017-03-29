@@ -106,8 +106,13 @@ Object.prototype.error = function (message, t) {
             .replace(/[<]/g, '&lt;');
     }
 
-    go("var make_parse = " + (make_parse.toSource ?
-            make_parse.toSource() : make_parse.toString()) + ";");
+    document.getElementById('INPUT').value = 
+    `var a = "hello"; // initialize a
+    var b = function(x) {
+        var c = 3;
+        return x+c;
+    };`
+    go(document.getElementById('INPUT').value);
 
     document.getElementById('PARSE').onclick = function (e) {
         go(document.getElementById('INPUT').value);

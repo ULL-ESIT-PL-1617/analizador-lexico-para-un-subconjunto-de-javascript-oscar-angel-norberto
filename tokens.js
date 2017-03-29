@@ -1,272 +1,89 @@
-// tokens.js
-// 2016-01-13
+"use strict";
 
-// (c) 2006 Douglas Crockford
+RegExp.prototype.bexec = function(str) {
+  let i = this.lastIndex;
+ 
+  let resultado = this.exec(str);
+  if(resultado && (resultado.index == i)) return resultado;
+  return null;
+}
 
-// Produce an array of simple token objects from a string.
-// A simple token object contains these members:
-//      type: 'name', 'string', 'number', 'operator'
-//      value: string or number value of the token
-//      from: index of first character of the token
-//      to: index of the last character + 1
+function Token() {
+    this.from;             
+    this.i = 0;               
+    this.n;                    
+    this.m;                   
+    this.result = [];           
+}
 
-// Comments of the // type are ignored.
+Token.prototype.tokens = function (str) {
+    const WHITES              = /\s+/g;
+    const ID                  = /[a-zA-Z_][a-zA-Z0-9]*/g;
+    const NUM                 = /\d+(.\d+)?([eE][+-]?\d+)?/g;
+    const STRING              = /('(\\.|[^'])*')|("(\\.|[^"])*")/g;
+    const ONELINECOMMENT      = /\/\/.*/g;
+    const MULTIPLELINECOMMENT = /\/\*(.|\n)*?\*\//g;
+    const TWOCHAROPERATORS    = /(===|!==|[+][+=]|-[-=]|=[=<>]|[<>][=<>]|&&|[|][|])/g;
+    const ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]?%])/g;
+    const tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS ];
+   
+    if (!str) return; 
+    
+    while (this.i < str.length) {
+        let i = this.i; //Necesario ya que this cambia dentro de forEach
+        tokens.forEach(function(t) {
+            t.lastIndex = i;
+             
+        }); 
+       
+        this.from = this.i;
+     
+        if (this.m = WHITES.bexec(str) || 
+           (this.m = ONELINECOMMENT.bexec(str))  || 
+           (this.m = MULTIPLELINECOMMENT.bexec(str))) { this.getTok();
+           }
+        // name.
+        else if (this.m = ID.bexec(str)) {
+            this.result.push(this.make('name', this.getTok()));
+        } 
+        // number.
+        else if (this.m = NUM.bexec(str)) {
+            this.n = +this.getTok();
 
-// Operators are by default single characters. Multicharacter
-// operators can be made by supplying a string of prefix and
-// suffix characters.
-// characters. For example,
-//      '<>+-&', '=>&:'
-// will match any of these:
-//      <=  >>  >>>  <>  >=  +: -: &: &&: &&
-
-/*jslint this */
-
-String.prototype.tokens = function (prefix, suffix) {
-    'use strict';
-    var c;                      // The current character.
-    var from;                   // The index of the start of the token.
-    var i = 0;                  // The index of the current character.
-    var length = this.length;
-    var n;                      // The number value.
-    var q;                      // The quote character.
-    var str;                    // The string value.
-
-    var result = [];            // An array to hold the results.
-
-    var make = function (type, value) {
-
-// Make a token object.
-
-        return {
-            type: type,
-            value: value,
-            from: from,
-            to: i
-        };
-    };
-
-// Begin tokenization. If the source string is empty, return nothing.
-
-    if (!this) {
-        return;
-    }
-
-// If prefix and suffix strings are not provided, supply defaults.
-
-    if (typeof prefix !== 'string') {
-        prefix = '<>+-&';
-    }
-    if (typeof suffix !== 'string') {
-        suffix = '=>&:';
-    }
-
-
-// Loop through this text, one character at a time.
-
-    c = this.charAt(i);
-    while (c) {
-        from = i;
-
-// Ignore whitespace.
-
-        if (c <= ' ') {
-            i += 1;
-            c = this.charAt(i);
-
-// name.
-
-        } else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-            str = c;
-            i += 1;
-            while (true) {
-                c = this.charAt(i);
-                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
-                        (c >= '0' && c <= '9') || c === '_') {
-                    str += c;
-                    i += 1;
-                } else {
-                    break;
-                }
-            }
-            result.push(make('name', str));
-
-// number.
-
-// A number cannot start with a decimal point. It must start with a digit,
-// possibly '0'.
-
-        } else if (c >= '0' && c <= '9') {
-            str = c;
-            i += 1;
-
-// Look for more digits.
-
-            while (true) {
-                c = this.charAt(i);
-                if (c < '0' || c > '9') {
-                    break;
-                }
-                i += 1;
-                str += c;
-            }
-
-// Look for a decimal fraction part.
-
-            if (c === '.') {
-                i += 1;
-                str += c;
-                while (true) {
-                    c = this.charAt(i);
-                    if (c < '0' || c > '9') {
-                        break;
-                    }
-                    i += 1;
-                    str += c;
-                }
-            }
-
-// Look for an exponent part.
-
-            if (c === 'e' || c === 'E') {
-                i += 1;
-                str += c;
-                c = this.charAt(i);
-                if (c === '-' || c === '+') {
-                    i += 1;
-                    str += c;
-                    c = this.charAt(i);
-                }
-                if (c < '0' || c > '9') {
-                    make('number', str).error("Bad exponent");
-                }
-                do {
-                    i += 1;
-                    str += c;
-                    c = this.charAt(i);
-                } while (c >= '0' && c <= '9');
-            }
-
-// Make sure the next character is not a letter.
-
-            if (c >= 'a' && c <= 'z') {
-                str += c;
-                i += 1;
-                make('number', str).error("Bad number");
-            }
-
-// Convert the string value to a number. If it is finite, then it is a good
-// token.
-
-            n = +str;
-            if (isFinite(n)) {
-                result.push(make('number', n));
+            if (isFinite(this.n)) {
+                this.result.push(this.make('number', this.n));
             } else {
-                make('number', str).error("Bad number");
+                this.make('number', this.m[0]).error("Bad number");
             }
-
-// string
-
-        } else if (c === '\'' || c === '"') {
-            str = '';
-            q = c;
-            i += 1;
-            while (true) {
-                c = this.charAt(i);
-                if (c < ' ') {
-                    make('string', str).error(
-                        (c === '\n' || c === '\r' || c === '')
-                            ? "Unterminated string."
-                            : "Control character in string.",
-                        make('', str)
-                    );
-                }
-
-// Look for the closing quote.
-
-                if (c === q) {
-                    break;
-                }
-
-// Look for escapement.
-
-                if (c === '\\') {
-                    i += 1;
-                    if (i >= length) {
-                        make('string', str).error("Unterminated string");
-                    }
-                    c = this.charAt(i);
-                    switch (c) {
-                    case 'b':
-                        c = '\b';
-                        break;
-                    case 'f':
-                        c = '\f';
-                        break;
-                    case 'n':
-                        c = '\n';
-                        break;
-                    case 'r':
-                        c = '\r';
-                        break;
-                    case 't':
-                        c = '\t';
-                        break;
-                    case 'u':
-                        if (i >= length) {
-                            make('string', str).error("Unterminated string");
-                        }
-                        c = parseInt(this.substr(i + 1, 4), 16);
-                        if (!isFinite(c) || c < 0) {
-                            make('string', str).error("Unterminated string");
-                        }
-                        c = String.fromCharCode(c);
-                        i += 4;
-                        break;
-                    }
-                }
-                str += c;
-                i += 1;
-            }
-            i += 1;
-            result.push(make('string', str));
-            c = this.charAt(i);
-
-// comment.
-
-        } else if (c === '/' && this.charAt(i + 1) === '/') {
-            i += 1;
-            while (true) {
-                c = this.charAt(i);
-                if (c === '\n' || c === '\r' || c === '') {
-                    break;
-                }
-                i += 1;
-            }
-
-// combining
-
-        } else if (prefix.indexOf(c) >= 0) {
-            str = c;
-            i += 1;
-            while (true) {
-                c = this.charAt(i);
-                if (i >= length || suffix.indexOf(c) < 0) {
-                    break;
-                }
-                str += c;
-                i += 1;
-            }
-            result.push(make('operator', str));
-
-// single-character operator
-
+        } 
+        // string
+        else if (this.m = STRING.bexec(str)) {
+            this.result.push(this.make('string', this.getTok().replace(/^["']|["']$/g,'')));
+        } 
+        // two char operator
+        else if (this.m = TWOCHAROPERATORS.bexec(str)) {
+            this.result.push(this.make('operator', this.getTok()));
+        // single-character operator
+        } else if (this.m = ONECHAROPERATORS.bexec(str)){
+            this.result.push(this.make('operator', this.getTok()));
         } else {
-            i += 1;
-            result.push(make('operator', c));
-            c = this.charAt(i);
+          throw "Syntax error near '"+str.substr(this.i)+"'";
         }
     }
-    return result;
+    return this.result;
 };
 
+Token.prototype.make = function (type, value) {
+    return {
+        type: type,
+        value: value,
+        from: this.from,
+        to: this.i
+    };
+};
+
+Token.prototype.getTok = function () {
+    let str = this.m[0];
+    this.i += str.length;
+    return str;
+};
