@@ -1,8 +1,32 @@
+<style>
+  body {
+    background: linear-gradient(to bottom right,black, rgb(51, 51, 51));
+    font-size: 120%;
+    color: 	white;
+  }
+  form, h1 {
+    text-align: center;
+  }
+  
+  a {
+    display:block;
+    color: orange;
+    text-align: center;
+  }
+  a:hover {
+    color: white;
+  }
+  input  {
+    color: orange;
+    background-color: black;
+  }
+</style>
+
 <% var title = 'Authentication Example' %>
 
 <h1>Login</h1>
 <%- message %>
-Try accessing <a href="/restricted">/restricted</a>, then authenticate with "tj" and "foobar".
+
 <form method="post" action="/login">
   <p>
     <label>Username:</label>
@@ -16,3 +40,5 @@ Try accessing <a href="/restricted">/restricted</a>, then authenticate with "tj"
     <input type="submit" value="Login">
   </p>
 </form>
+<a href="register">Register?</a>
+<a href="content">Access to gitbook?</a>

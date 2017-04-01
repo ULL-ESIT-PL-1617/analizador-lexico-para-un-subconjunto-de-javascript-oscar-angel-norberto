@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(to bottom right,black, rgb(51, 51, 51));
+    font-size: 120%;
+    color: 	white;
+}
+h1, h2, p {
+    text-align: center;
+}
+
+a {
+  color: orange;
+}
+a:hover {
+  color: white;
+}
+
+th {background-color: black; border: black solid 1px; text-align: left;
+    padding-left: 10px; padding-right: 10px; vertical-align: top;}
+td {background-color: black; border: black solid 1pt; padding-left: 10px;
+    padding-right: 10px; vertical-align: top;}
+table {
+    width: 90%; 
+    border: 0px; 
+    cellpadding: 
+    0px;
+    
+}
+
+#INPUT {
+    border: 2px solid black;
+    color: blue;
+    font-family: monospace;
+    height: 3in;
+    overflow: auto;
+    padding: 0.5em;
+    width: 100%;"
+}
+#PARSE  {
+    color: orange;
+    background-color: black;
+}
+
+.Info {
+    text-align: left;
+}

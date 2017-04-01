@@ -1,0 +1,613 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Capitulo 4: Query String · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../cap3/cap3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../sesion.html">
+            
+                <a href="../../sesion.html">
+            
+                    
+                    Cierre de la sesión
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Instalación de herramientas y su uso
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../manualHerramientas/">
+            
+                <a href="../../manualHerramientas/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../manualHerramientas/cap1/cap1.html">
+            
+                <a href="../../manualHerramientas/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: MarkDown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../manualHerramientas/cap2/cap2.html">
+            
+                <a href="../../manualHerramientas/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: gh-pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../manualHerramientas/cap3/cap3.html">
+            
+                <a href="../../manualHerramientas/cap3/cap3.html">
+            
+                    
+                    Capitulo 3: nodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../manualHerramientas/cap4/cap4.html">
+            
+                <a href="../../manualHerramientas/cap4/cap4.html">
+            
+                    
+                    Capitulo 4: GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../manualHerramientas/cap5/cap5.html">
+            
+                <a href="../../manualHerramientas/cap5/cap5.html">
+            
+                    
+                    Capitulo 5: Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../manualHerramientas/cap6/cap6.html">
+            
+                <a href="../../manualHerramientas/cap6/cap6.html">
+            
+                    
+                    Capitulo 6: Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../manualHerramientas/cap7/cap7.html">
+            
+                <a href="../../manualHerramientas/cap7/cap7.html">
+            
+                    
+                    Capitulo 7: Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../manualHerramientas/cap8/cap8.html">
+            
+                <a href="../../manualHerramientas/cap8/cap8.html">
+            
+                    
+                    Capitulo 8: Cloud 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Rutas en ExpressJS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../rutasExpress/">
+            
+                <a href="../../rutasExpress/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../rutasExpress/cap1/cap1.html">
+            
+                <a href="../../rutasExpress/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: Introduccion al direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../rutasExpress/cap2/cap2.html">
+            
+                <a href="../../rutasExpress/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: Direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../rutasExpress/cap3/cap3.html">
+            
+                <a href="../../rutasExpress/cap3/cap3.html">
+            
+                    
+                    Capitulo 3: Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../rutasExpress/cap4/cap4.html">
+            
+                <a href="../../rutasExpress/cap4/cap4.html">
+            
+                    
+                    Capitulo 4: Router API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    ExpressJS. Cookies y sessions
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../cap1/cap1.html">
+            
+                <a href="../cap1/cap1.html">
+            
+                    
+                    Capitulo 1: HTTP Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../cap2/cap2.html">
+            
+                <a href="../cap2/cap2.html">
+            
+                    
+                    Capitulo 2: Módulo cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../cap3/cap3.html">
+            
+                <a href="../cap3/cap3.html">
+            
+                    
+                    Capitulo 3: Cookie en ExpressJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="cap4.html">
+            
+                <a href="cap4.html">
+            
+                    
+                    Capitulo 4: Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Expresiones regulares
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../analizadorLexico/">
+            
+                <a href="../../analizadorLexico/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../analizadorLexico/cap1/cap1.html">
+            
+                <a href="../../analizadorLexico/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: Definición
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../analizadorLexico/cap2/cap2.html">
+            
+                <a href="../../analizadorLexico/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: Métodos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Capitulo 4: Query String</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="query-string">Query String</h1>
+<h3 id="&#xBF;que-son-los-query-strings">&#xBF;Que son los Query Strings?</h3>
+<p>Los Query Strings son uno de los m&#xE9;todos para transmitir informaci&#xF3;n a trav&#xE9;s de distintas p&#xE1;ginas web, utilizando para ello cadenas de caracters extra al final de las url. Un ejemplo puede ser una b&#xFA;squeda en google:</p>
+<pre><code>google.es/search?site=&amp;source=hp&amp;q=busqueda+de+ejemplo
+</code></pre><p>El texto que a partir de <code>?</code> es el Query String propiamente dicho.</p>
+<h3 id="usos">Usos</h3>
+<p>El principal uso que tienen es el de proporcionar informaci&#xF3;n adicional al destino. En el caso de que la petici&#xF3;n sea recibida por un programa, este programa puede utilizar la informaci&#xF3;n para modificar la p&#xE1;gina de forma din&#xE1;mica (las p&#xE1;ginas est&#xE1;ticas no suelen poder hacer esto y simplemente ignoran lo que halla a partir de la <code>?</code>).</p>
+<p>A dem&#xE1;s, pueden servir para proporcionar un identificador &#xFA;nico a una sesi&#xF3;n del usuario, permitiendo que se rastree sus movimientos a trav&#xE9;s de distintas p&#xE1;ginas, en lo que se conoce como &quot;Tracking&quot;. Este sistema se diferencia de las cookies en que no requiere que el cliente almacene informaci&#xF3;n, ya que simplemente se guardan como c&#xF3;digos en el url del sitio, aunque de esta manera incluso un mismo usuario que halla accedido en dos momentos distintos, o de dos formas distinas a una p&#xE1;gina ser&#xE1;n tratados como usuarios distintos. A difrencia de las cookies, no se pueden desactivar por lo que es m&#xE1;s fiable utilizar este m&#xE9;todo para hacer Tracking de sesiones individuales.</p>
+<h3 id="codificaci&#xF3;n">Codificaci&#xF3;n</h3>
+<p>Debido a ciertas restricciones con los car&#xE1;cters dentro de las url, los Query Strings han de codificarse de una manera llamada &quot;Percent-encoding&quot;:</p>
+<ul>
+<li>Los espacios se escriben <code>+</code> o <code>%20</code>.</li>
+<li>Las car&#xE1;cters alfanum&#xE9;ricos y <code>*</code>,<code>-</code>,<code>.</code> y <code>_</code> se mantienen igual.</li>
+<li>Los dem&#xE1;s caracteres se escriben como <code>%HH</code> donde HH es la codificaci&#xF3;n en hexadecimal segun UTF-8 (normalmente).</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../cap3/cap3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Capitulo 3: Cookie en ExpressJS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Capitulo 4: Query String","level":"1.5.5","depth":2,"next":{"title":"Expresiones regulares","level":"1.6","depth":1,"ref":"","articles":[{"title":"Introducción","level":"1.6.1","depth":2,"path":"analizadorLexico/README.md","ref":"analizadorLexico/README.md","articles":[]},{"title":"Capitulo 1: Definición","level":"1.6.2","depth":2,"path":"analizadorLexico/cap1/cap1.md","ref":"analizadorLexico/cap1/cap1.md","articles":[]},{"title":"Capitulo 2: Métodos","level":"1.6.3","depth":2,"path":"analizadorLexico/cap2/cap2.md","ref":"analizadorLexico/cap2/cap2.md","articles":[]}]},"previous":{"title":"Capitulo 3: Cookie en ExpressJS","level":"1.5.4","depth":2,"path":"cookiesSessions/cap3/cap3.md","ref":"cookiesSessions/cap3/cap3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cookiesSessions/cap4/cap4.md","mtime":"2017-04-01T08:06:11.812Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-01T09:35:04.944Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

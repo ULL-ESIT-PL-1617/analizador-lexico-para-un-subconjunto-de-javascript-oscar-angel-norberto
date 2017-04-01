@@ -1,0 +1,670 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Capitulo 4: Router API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../cap3/cap3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../sesion.html">
+            
+                <a href="../../sesion.html">
+            
+                    
+                    Cierre de la sesión
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Instalación de herramientas y su uso
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../manualHerramientas/">
+            
+                <a href="../../manualHerramientas/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../manualHerramientas/cap1/cap1.html">
+            
+                <a href="../../manualHerramientas/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: MarkDown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../manualHerramientas/cap2/cap2.html">
+            
+                <a href="../../manualHerramientas/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: gh-pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../manualHerramientas/cap3/cap3.html">
+            
+                <a href="../../manualHerramientas/cap3/cap3.html">
+            
+                    
+                    Capitulo 3: nodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../manualHerramientas/cap4/cap4.html">
+            
+                <a href="../../manualHerramientas/cap4/cap4.html">
+            
+                    
+                    Capitulo 4: GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../manualHerramientas/cap5/cap5.html">
+            
+                <a href="../../manualHerramientas/cap5/cap5.html">
+            
+                    
+                    Capitulo 5: Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../manualHerramientas/cap6/cap6.html">
+            
+                <a href="../../manualHerramientas/cap6/cap6.html">
+            
+                    
+                    Capitulo 6: Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../manualHerramientas/cap7/cap7.html">
+            
+                <a href="../../manualHerramientas/cap7/cap7.html">
+            
+                    
+                    Capitulo 7: Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../manualHerramientas/cap8/cap8.html">
+            
+                <a href="../../manualHerramientas/cap8/cap8.html">
+            
+                    
+                    Capitulo 8: Cloud 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Rutas en ExpressJS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../cap1/cap1.html">
+            
+                <a href="../cap1/cap1.html">
+            
+                    
+                    Capitulo 1: Introduccion al direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../cap2/cap2.html">
+            
+                <a href="../cap2/cap2.html">
+            
+                    
+                    Capitulo 2: Direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../cap3/cap3.html">
+            
+                <a href="../cap3/cap3.html">
+            
+                    
+                    Capitulo 3: Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="cap4.html">
+            
+                <a href="cap4.html">
+            
+                    
+                    Capitulo 4: Router API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    ExpressJS. Cookies y sessions
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../cookiesSessions/">
+            
+                <a href="../../cookiesSessions/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../cookiesSessions/cap1/cap1.html">
+            
+                <a href="../../cookiesSessions/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: HTTP Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../cookiesSessions/cap2/cap2.html">
+            
+                <a href="../../cookiesSessions/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: Módulo cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../cookiesSessions/cap3/cap3.html">
+            
+                <a href="../../cookiesSessions/cap3/cap3.html">
+            
+                    
+                    Capitulo 3: Cookie en ExpressJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../cookiesSessions/cap4/cap4.html">
+            
+                <a href="../../cookiesSessions/cap4/cap4.html">
+            
+                    
+                    Capitulo 4: Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Expresiones regulares
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../analizadorLexico/">
+            
+                <a href="../../analizadorLexico/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../analizadorLexico/cap1/cap1.html">
+            
+                <a href="../../analizadorLexico/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: Definición
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../analizadorLexico/cap2/cap2.html">
+            
+                <a href="../../analizadorLexico/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: Métodos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Capitulo 4: Router API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="router">Router</h1>
+<p>Un router es un objeto que representa una versi&#xF3;n simplificada de lo que es una aplicaci&#xF3;n express. Para crear un router basta con usar la siguiente sentencia:</p>
+<pre><code>var router = express.Router();
+</code></pre><h2 id="routermetodoruta-callback--callback">router.METODO(ruta, [callback, ...] callback)</h2>
+<p>Ahora podemos especificar las rutas que reconocera el router de forma similar a una aplicaci&#xF3;n express. En vez del m&#xE9;todo <em>get</em> podr&#xED;amos utilizar otro m&#xE9;todo como <em>post</em>, o directamente podr&#xED;amos capturar cualquier m&#xE9;todo con <em>router.all(ruta, [callback, ...] callback)</em>.</p>
+<pre><code>router.get(&apos;/inicio&apos;, function(req, res) {
+  res.send(&apos;Router Inicio&apos;);
+});
+router.get(&apos;/final&apos;, function(req, res) {
+  res.send(&apos;Router Final&apos;);
+});
+</code></pre><p>Para aplicar el router a nuestra aplicaci&#xF3;n express hay que usar el m&#xE9;todo <em>use</em> de express, indicando la ruta en la que queremos montar el router. En este caso estamos montando el mismo router en dos rutas diferentes.</p>
+<pre><code>app.use(&apos;/viejo/home&apos;, router);
+app.use(&apos;/nuevo&apos;, router);
+</code></pre><p>El resultado es poder responder a las rutas:</p>
+<ul>
+<li>/viejo/home/inicio</li>
+<li>/viejo/home/final</li>
+<li>/nuevo/inicio</li>
+<li>/nuevo/final</li>
+</ul>
+<h2 id="separaci&#xF3;n-del-router-en-una-archivo">Separaci&#xF3;n del router en una archivo</h2>
+<p>Con el objetivo de lograr una mayor modularidad en nuestro c&#xF3;digo, podemos usar los routers para agrupar rutas de nuestra aplicaci&#xF3;n y tenerlas en diferentes ficheros. Simplemente basta con crear un fichero nuevo, por ejemplo <em>miRouter.js</em>, en el cual definimos el router. Este fichero deber&#xE1; tener al final la siguiente sentencia, ene l caso que hallamos llamada &quot;router&quot; a nuestro <em>Router</em>:</p>
+<pre><code>module.exports = router
+</code></pre><p>Finalmente, para poder cargar el router en nuestra aplicaci&#xF3;n express es necesario:</p>
+<pre><code>var router = require(&apos;./miRouter.js&apos;);
+</code></pre><h2 id="routerparamnombre-callback">router.param(nombre, callback)</h2>
+<p>Son un tipo de middleware que se activan si en la ruta que se pide hay un par&#xE1;metro que coincide con el nombre que espera este middleware.</p>
+<p>El primer par&#xE1;metro es el nombre del par&#xE1;metro que activa el middleware.
+El segundo par&#xE1;metro es una funci&#xF3;n que tiene de argumentos.</p>
+<ul>
+<li>req, El objeto que contiene la petici&#xF3;n</li>
+<li>res, El objeto que contiene la respuesta</li>
+<li>next, Para poder pasar al siguiente middleware</li>
+<li>Valor del par&#xE1;metro</li>
+<li>Nombre del par&#xE1;metro</li>
+</ul>
+<p>En el siguiente ejemplo podemos ver un uso simple.</p>
+<pre><code>//Ejemplo2.js
+var express = require(&apos;express&apos;);
+var app = express();
+
+//Creaci&#xF3;n de un router
+var router = express.Router();
+
+//Adici&#xF3;n de una ruta reconocida por el router
+router.get(&apos;/:id&apos;, function(req, res) {
+  res.send(req.params.saludo);
+});
+//Manejo de un parametro detectado(id)
+router.param(&apos;id&apos;, function (req, res, next, valor, id) {
+req.params.saludo = &quot;Hola &quot; + valor + &quot;&#xA1;&#xA1;&#xA1;&quot;;
+  next();
+});
+app.use(&apos;/usuario&apos;, router);
+
+app.set(&apos;port&apos;, (process.env.PORT || 8080));
+
+//Ruta raiz de la aplicacion principal
+app.get(&apos;/&apos;,function (req, res) {
+  res.send(&apos;Raiz&apos;);
+});
+
+app.listen(app.get(&apos;port&apos;), function() {
+  console.log(&apos;En el puerto: &apos;, app.get(&apos;port&apos;));
+});
+</code></pre><p>En esta aplicaci&#xF3;n express podemos visitar la ruta /usuario/nombre donde el nombre puede ser cualquier cosa. Al acceder a esta ruta se nos saldr&#xE1; un mensaje con &quot;Hola <em>nombre</em>&quot;&#xA1;&#xA1;&#xA1;. Hay que destacar que aunque   <em>router.get(&apos;/:id&apos;...</em> este antes que <em>router.param(&apos;id&apos;,...</em>, est&#xE9; &#xFA;ltimo se activa antes y a&#xF1;ade el campo &quot;saludo&quot; al objeto de la petici&#xF3;n y luego le cede el control al primero.</p>
+<h2 id="routerroute-y-routeruse">router.route y router.use</h2>
+<p>El m&#xE9;todo <em>route</em> para router permite retornar una instancia de una ruta.</p>
+<p><em>router.route(ruta)</em></p>
+<p>El m&#xE9;todo <em>use</em> para router permite usar middleware, similarmente a una aplicaci&#xF3;n express.</p>
+<p><em>router.use([ruta], [funcion, ...] funcion)</em></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../cap3/cap3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Capitulo 3: Middleware">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Capitulo 4: Router API","level":"1.4.5","depth":2,"next":{"title":"ExpressJS. Cookies y sessions","level":"1.5","depth":1,"ref":"","articles":[{"title":"Introducción","level":"1.5.1","depth":2,"path":"cookiesSessions/README.md","ref":"cookiesSessions/README.md","articles":[]},{"title":"Capitulo 1: HTTP Cookie","level":"1.5.2","depth":2,"path":"cookiesSessions/cap1/cap1.md","ref":"cookiesSessions/cap1/cap1.md","articles":[]},{"title":"Capitulo 2: Módulo cookie","level":"1.5.3","depth":2,"path":"cookiesSessions/cap2/cap2.md","ref":"cookiesSessions/cap2/cap2.md","articles":[]},{"title":"Capitulo 3: Cookie en ExpressJS","level":"1.5.4","depth":2,"path":"cookiesSessions/cap3/cap3.md","ref":"cookiesSessions/cap3/cap3.md","articles":[]},{"title":"Capitulo 4: Query String","level":"1.5.5","depth":2,"path":"cookiesSessions/cap4/cap4.md","ref":"cookiesSessions/cap4/cap4.md","articles":[]}]},"previous":{"title":"Capitulo 3: Middleware","level":"1.4.4","depth":2,"path":"rutasExpress/cap3/cap3.md","ref":"rutasExpress/cap3/cap3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rutasExpress/cap4/cap4.md","mtime":"2017-04-01T08:06:11.844Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-01T09:35:04.944Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

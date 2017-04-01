@@ -1,0 +1,669 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Capitulo 2: Módulo cookie · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../cap3/cap3.html" />
+    
+    
+    <link rel="prev" href="../cap1/cap1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../sesion.html">
+            
+                <a href="../../sesion.html">
+            
+                    
+                    Cierre de la sesión
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Instalación de herramientas y su uso
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../manualHerramientas/">
+            
+                <a href="../../manualHerramientas/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../manualHerramientas/cap1/cap1.html">
+            
+                <a href="../../manualHerramientas/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: MarkDown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../manualHerramientas/cap2/cap2.html">
+            
+                <a href="../../manualHerramientas/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: gh-pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../manualHerramientas/cap3/cap3.html">
+            
+                <a href="../../manualHerramientas/cap3/cap3.html">
+            
+                    
+                    Capitulo 3: nodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../manualHerramientas/cap4/cap4.html">
+            
+                <a href="../../manualHerramientas/cap4/cap4.html">
+            
+                    
+                    Capitulo 4: GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../manualHerramientas/cap5/cap5.html">
+            
+                <a href="../../manualHerramientas/cap5/cap5.html">
+            
+                    
+                    Capitulo 5: Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../manualHerramientas/cap6/cap6.html">
+            
+                <a href="../../manualHerramientas/cap6/cap6.html">
+            
+                    
+                    Capitulo 6: Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../manualHerramientas/cap7/cap7.html">
+            
+                <a href="../../manualHerramientas/cap7/cap7.html">
+            
+                    
+                    Capitulo 7: Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../manualHerramientas/cap8/cap8.html">
+            
+                <a href="../../manualHerramientas/cap8/cap8.html">
+            
+                    
+                    Capitulo 8: Cloud 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Rutas en ExpressJS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../rutasExpress/">
+            
+                <a href="../../rutasExpress/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../rutasExpress/cap1/cap1.html">
+            
+                <a href="../../rutasExpress/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: Introduccion al direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../rutasExpress/cap2/cap2.html">
+            
+                <a href="../../rutasExpress/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: Direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../rutasExpress/cap3/cap3.html">
+            
+                <a href="../../rutasExpress/cap3/cap3.html">
+            
+                    
+                    Capitulo 3: Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../rutasExpress/cap4/cap4.html">
+            
+                <a href="../../rutasExpress/cap4/cap4.html">
+            
+                    
+                    Capitulo 4: Router API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    ExpressJS. Cookies y sessions
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../cap1/cap1.html">
+            
+                <a href="../cap1/cap1.html">
+            
+                    
+                    Capitulo 1: HTTP Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="cap2.html">
+            
+                <a href="cap2.html">
+            
+                    
+                    Capitulo 2: Módulo cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../cap3/cap3.html">
+            
+                <a href="../cap3/cap3.html">
+            
+                    
+                    Capitulo 3: Cookie en ExpressJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../cap4/cap4.html">
+            
+                <a href="../cap4/cap4.html">
+            
+                    
+                    Capitulo 4: Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Expresiones regulares
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../analizadorLexico/">
+            
+                <a href="../../analizadorLexico/">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../analizadorLexico/cap1/cap1.html">
+            
+                <a href="../../analizadorLexico/cap1/cap1.html">
+            
+                    
+                    Capitulo 1: Definición
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../analizadorLexico/cap2/cap2.html">
+            
+                <a href="../../analizadorLexico/cap2/cap2.html">
+            
+                    
+                    Capitulo 2: Métodos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Capitulo 2: Módulo cookie</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="m&#xF3;dulo-cookie">M&#xF3;dulo cookie</h1>
+<p>El m&#xF3;dulo cookie es un analizador y serializador de cookies para servidores http.</p>
+<p>Para usar el m&#xF3;dulo es necesario guardar el m&#xF3;dulo:</p>
+<blockquote>
+<p>npm install cookie --save</p>
+</blockquote>
+<p>Para poner acceder a todas las funcionalidades del m&#xF3;dulo hay que:</p>
+<blockquote>
+<p>var cookie = require(&apos;cookie&apos;);</p>
+</blockquote>
+<p>Este m&#xF3;dulo no ofrece dos funcionalidades, parse y serialize.</p>
+<h2 id="cookieparsecadena-opciones">cookie.parse(cadena, opciones)</h2>
+<p>Analiza la cadena de una cabecera de un http cookie y devuelve el mismo transformado en un objeto con parejas de campo-valor de todos los cookies.</p>
+<p>Entre las opciones que acepta est&#xE1; una funci&#xF3;n(decode) que se usar&#xE1; para sacar el valor de los campos durante el analisis. Si no se pasa est&#xE1; funci&#xF3;n, la funci&#xF3;n por defecto es decodeURIComponent.</p>
+<h2 id="cookieserializenombre-valor-opciones">cookie.serialize(nombre, valor, opciones)</h2>
+<p>Permite construir un par campo-valor que ser&#xE1; serializado para la creaci&#xF3;n de un cookie con Set-Cookie.</p>
+<ul>
+<li>domain: Valor del dominio del cookie. Por defecto ser&#xE1; el dominio actual.</li>
+<li>encode: Funci&#xF3;n que ser&#xE1; usada para codificar el valor d eun cookie.Por defecto ser&#xE1; ecodeURIComponent.</li>
+<li>expires: La fecha de destruci&#xF3;n del cookie. Por defecto ser&#xE1; cuando se cierre el navegador.</li>
+<li>httpOnly: Valor que no permite al cliente javascript acceder a los cookies desde document.cookie cuando es verdadero. Por defecto es falso.</li>
+<li>maxAge: N&#xFA;mero entero de segundos durante los que el cookie no se destruir&#xE1;.</li>
+<li>path: Ruta que debe existir en la fuente a la que se envia la petici&#xF3;n.</li>
+<li>sameSite:<ul>
+<li>true: Estricto uso del mismo sitio.</li>
+<li>false: No requerido el mismo sitio.</li>
+<li>&apos;lax&apos;: Suave uso del mismo sitio.</li>
+<li>&apos;strict&apos;: Estricto uso del mismo sitio.</li>
+</ul>
+</li>
+<li>secure: Los clientes no envian a los servidores los cookies si la conexion no es segura(https) cuando se este valor es verdadero. Por defecto es falso.</li>
+</ul>
+<h2 id="ejemplo">Ejemplo</h2>
+<p>En el fichero <strong>ejemploCookie.js</strong> podemos ver el m&#xF3;dulo en uso con un servidor http. Este ejemplo muestra un formulario en el lado del cliente en el que puede introducir un nombre y enviarlo.</p>
+<p>Cuando accedemos al la raiz por primera vez veremos en el servidor:</p>
+<pre><code>URL: &apos;/?name=&apos;
+URL analizada:{ name: &apos;&apos;}
+cookie no analizado: undefined
+cookie analizado: {}
+URL: &apos;/favicon.ico&apos;
+URL analizada:{}
+cookie no analizado: undefined
+cookie analizado: {}
+</code></pre><p>Como vemos, en la primera petici&#xF3;n no hay ning&#xFA;n cookie guardado y la url pasa un par&#xE1;metro vacio. Los cookies se analizan, pero como no hay el objeto es vac&#xED;o.</p>
+<pre><code>var cookies = cookie.parse(req.headers.cookie || &apos;&apos;);
+</code></pre><p>Si el cliente envia un nombre, por ejemplo usuario:</p>
+<p><img src="../assets/formulario.png" alt=""></p>
+<pre><code>URL: &apos;/?name=usuario&apos;
+URL analizada:{ name: &apos;usuario&apos; }
+URL: &apos;/?name=&apos;
+URL analizada:{ name: &apos;&apos; }
+cookie no analizado: &apos;name=usuario&apos;
+cookie analizado: { name: &apos;usuario&apos; }
+URL: &apos;/favicon.ico&apos;
+URL analizada:{}
+cookie no analizado: &apos;name=usuario&apos;
+cookie analizado: { name: &apos;usuario&apos; }
+</code></pre><p>Ahora la url ya no tiene un par&#xE1;metro vacio y se env&#xED;a un Cookie al cliente a partir del par&#xE1;metro:</p>
+<pre><code>res.setHeader(&apos;Set-Cookie&apos;, cookie.serialize(&apos;name&apos;, String(query.name), {
+  httpOnly: true,
+  maxAge: 10 // 10 segundos
+}));
+</code></pre><p>El cliente quedar&#xED;a ahora como:</p>
+<p><img src="../assets/conocido.png" alt=""></p>
+<p>Y si refrescamos la p&#xE1;gina antes de 10 segundos, se nos seguir&#xE1; reconociendo como usuario. Despu&#xE9;s de diez segundos el cookie se destruir&#xE1; y ya no se nos reconocer&#xE1;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../cap1/cap1.html" class="navigation navigation-prev " aria-label="Previous page: Capitulo 1: HTTP Cookie">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../cap3/cap3.html" class="navigation navigation-next " aria-label="Next page: Capitulo 3: Cookie en ExpressJS">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Capitulo 2: Módulo cookie","level":"1.5.3","depth":2,"next":{"title":"Capitulo 3: Cookie en ExpressJS","level":"1.5.4","depth":2,"path":"cookiesSessions/cap3/cap3.md","ref":"cookiesSessions/cap3/cap3.md","articles":[]},"previous":{"title":"Capitulo 1: HTTP Cookie","level":"1.5.2","depth":2,"path":"cookiesSessions/cap1/cap1.md","ref":"cookiesSessions/cap1/cap1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cookiesSessions/cap2/cap2.md","mtime":"2017-04-01T08:06:11.812Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-01T09:35:04.944Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
