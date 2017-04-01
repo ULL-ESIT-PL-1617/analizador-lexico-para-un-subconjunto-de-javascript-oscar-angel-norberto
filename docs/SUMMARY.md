@@ -1,5 +1,6 @@
 # Summary
 
+* [Cierre de la sesión](/sesion.md)
 * Instalación de herramientas y su uso
     * [Introducción](manualHerramientas/README.md)
     * [Capitulo 1: MarkDown](manualHerramientas/cap1/cap1.md)
@@ -24,3 +25,7 @@
     * [Capitulo 2: Módulo cookie](cookiesSessions/cap2/cap2.md)
     * [Capitulo 3: Cookie en ExpressJS](cookiesSessions/cap3/cap3.md)
     * [Capitulo 4: Query String](cookiesSessions/cap4/cap4.md)
+* Expresiones regulares
+    * [Introducción](analizadorLexico/README.md)
+    * [Capitulo 1: Definición](analizadorLexico/cap1/cap1.md)
+    * [Capitulo 2: Métodos](analizadorLexico/cap2/cap2.md)

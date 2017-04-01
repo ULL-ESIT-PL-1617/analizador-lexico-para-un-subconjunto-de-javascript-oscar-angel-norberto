@@ -12,4 +12,4 @@ Norberto García Gazpar http://alu0100611519.github.io/
 
 
 
-![](/rutasExpress/assets/express.jpg)
+![](/analizadorLexico/assets/expReg.png)
